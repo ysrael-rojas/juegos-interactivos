@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+   
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <div class="opciones-juegos">
+            <button class="btn-opt-juego" onclick="jugarHermanos()">LISTAR HERMANOS</button>
+            <button class="btn-opt-juego" onclick="jugarBloques()">GENERAR BLOQUES</button>
+            <button class="btn-opt-juego" onclick="competirJuego()">YAN QUEN PO!!!</button>
+            <button class="btn-opt-juego" onclick="determinarEdad()">CALCULAR EDAD</button>
+            <button class="btn-opt-juego" onclick="convertirTemperatura()">CONVERSOR TEMPERATURA</button>
+            <button class="btn-opt-juego" onclick="contarVocales()">CONTADOR VOCALES</button>
+            <button class="btn-opt-juego" onclick="generarTablaMultiplicar()">TABLA MULTIPLICAR</button>
+        </div>  
+        <div class="area-juego">
+            <div id="area-juego-hermanos">
+                <div class="input-box"> 
+                    <h3>HERMANOS POR REGISTRAR?</h3>                   
+                    <input id="input-numero-hermanos" type="text" placeholder="numero de hermanos">
+                    <button id="btn-procesar-hermanos" onclick="procesarHermanos()">Procesar</button>
+                </div>                          
+                <div class="input-box">
+                    <h3>INGRESE EL NOMBRE:</h3>  
+                    <input id="input-nombre-hermano" type="text" placeholder="Nombre hermano" disabled>
+                    <button class="form-hermanos" id="btn-agregar-nombre-hermano" onclick="agregarNombreHermanoLista()" disabled>Agregar</button>
+                </div>  
+                          
+                <div id="lista-container" class="lista-container">
+                    
+                </div>
+            </div>
+            <div id="area-juego-bloques">
+                <div class="input-box"> 
+                    <h3>CUANTOS BLOQUES DESEA GENERAR?</h3>                   
+                    <input id="input-numero-bloques" type="text" placeholder="numero de bloques">
+                    <button id="btn-procesar-bloques" onclick="procesarBloques()">Generar</button>
+                </div> 
+                <div id="contenedor" class="contenedor-bloques">
+
+                </div>
+            </div>
+            <div id="area-juego-yanquenpo" class="area-juego-yanquenpo">
+                <div class="box-jugador">
+                    <h3>SELECCIONA PIEDRA PAPEL O TIJERA</h3>
+                    <div class="opt-jugador-maquina">
+                        <button class="opt piedra"><i class="fa-regular fa-hand-back-fist"></i></button>
+                        <button class="opt papel"><i class="fa-regular fa-hand-spock"></i></button>
+                        <button class="opt tijera"><i class="fa-regular fa-hand-scissors"></i></button>
+                    </div>
+                </div>
+                <div class="box-maquina">
+                    <h3>MAQUINA</h3>
+                    <div class="opt-jugador-maquina">
+                        <button class="opt"><i class="fa-solid fa-question"></i></button>
+                    </div>
+                </div>               
+            </div>      
+            
+        </div>      
+    </main>
+    
+    
+    <script src="app.js"></script>
+</body>
+</html>
